@@ -3,9 +3,8 @@ workflows:
     name: Android Debug Build
     environment:
       vars:
-        JAVA_HOME: "/usr/lib/jvm/java-17-openjdk"
+        JAVA_HOME: /Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
     scripts:
-      - name: Build Debug APK
-        script: ./gradlew assembleDebug
+      - ./gradlew assembleDebug
     artifacts:
       - app/build/outputs/**/*.apk
