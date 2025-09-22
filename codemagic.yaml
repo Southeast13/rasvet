@@ -4,9 +4,8 @@ workflows:
     environment:
       vars:
         JAVA_HOME: "/usr/lib/jvm/java-17-openjdk"
-    android:
-      gradle: "8.2"
     scripts:
-      - ./gradlew assembleDebug
+      - name: Build Debug APK
+        script: ./gradlew assembleDebug
     artifacts:
       - app/build/outputs/**/*.apk
